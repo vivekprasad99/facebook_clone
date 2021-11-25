@@ -1,3 +1,4 @@
+import 'package:facebook_clone/widgets/maintab.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,12 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Facebook',
       theme: ThemeData(
-        
-        primarySwatch: Colors.blue,
+      primaryColor: Colors.white
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
+      home: MainTab(),
     );
   }
 }
