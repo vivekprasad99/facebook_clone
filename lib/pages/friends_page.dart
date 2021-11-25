@@ -1,8 +1,11 @@
+
 import 'package:facebook_clone/models/friends_model.dart';
 import 'package:flutter/material.dart';
 
+
+
 class FriendsPage extends StatefulWidget {
-  const FriendsPage({Key? key}) : super(key: key);
+  FriendsPage({Key? key}) : super(key: key);
 
   @override
   _FriendsPageState createState() => _FriendsPageState();
@@ -34,11 +37,13 @@ class _FriendsPageState extends State<FriendsPage> {
                       highlightColor: Colors.transparent,
                       color: Colors.green,
                       onPressed: () {
-                        print("hello");
+                        print('Person Clicked');
                       },
                     ),
                     decoration: BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.grey[300]),
+                      shape: BoxShape.circle,
+                      color: Colors.grey[300],
+                    ),
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 10.0),
@@ -48,14 +53,16 @@ class _FriendsPageState extends State<FriendsPage> {
                       highlightColor: Colors.transparent,
                       color: Colors.redAccent,
                       onPressed: () {
-                        print("hello");
+                        print('People Clicked');
                       },
                     ),
                     decoration: BoxDecoration(
-                        shape: BoxShape.circle, color: Colors.grey[300]),
+                      shape: BoxShape.circle,
+                      color: Colors.grey[300],
+                    ),
                   )
                 ],
-              )
+              ),
             ],
           ),
         ),

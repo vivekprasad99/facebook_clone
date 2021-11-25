@@ -49,20 +49,4 @@ List<FriendsModel> friendsData = [
     name: "Sameer",
     avatar: "images/user/u10.jpg",
   ),
-  FriendsModel(
-    name: "Sameer",
-    avatar: "images/user/u10.jpg",
-  ),
-  FriendsModel(
-    name: "Sameer",
-    avatar: "images/user/u10.jpg",
-  ),
-  FriendsModel(
-    name: "Sameer",
-    avatar: "images/user/u10.jpg",
-  ),
-  FriendsModel(
-    name: "Sameer",
-    avatar: "images/user/u10.jpg",
-  ),
 ];

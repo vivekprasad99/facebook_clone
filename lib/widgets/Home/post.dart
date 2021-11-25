@@ -1,4 +1,4 @@
-import 'package:facebook_clone/models/post_models.dart';
+import 'package:facebook_clone/models/post_model.dart';
 import 'package:flutter/material.dart';
 
 class Post extends StatelessWidget {
@@ -13,12 +13,13 @@ class Post extends StatelessWidget {
             Row(
               children: [
                 IconButton(
-                    onPressed: () {},
-                    iconSize: 50.0,
-                    icon: CircleAvatar(
-                      radius: 80,
-                      backgroundImage: AssetImage('images/user/u1.jpg'),
-                    )),
+                  iconSize: 50,
+                  onPressed: () => {},
+                  icon: CircleAvatar(
+                    radius: 80.0,
+                    backgroundImage: AssetImage(postData[i].avatarImage),
+                  ),
+                ),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,18 +27,17 @@ class Post extends StatelessWidget {
                       Text(
                         postData[i].name,
                         style: TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold),
+                          fontSize: 20.0,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                       Wrap(
                         spacing: 10.0,
                         children: [
                           Text(
-                            '12 min ago',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
+                            postData[i].time,
+                            style: TextStyle(fontSize: 18.0),
                           ),
                           Icon(Icons.public),
                         ],
@@ -46,10 +46,10 @@ class Post extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  onPressed: () {},
-                  iconSize: 30.0,
+                  iconSize: 30,
+                  onPressed: postData[i].moreOnPressed,
                   icon: Icon(Icons.more_horiz_outlined),
-                )
+                ),
               ],
             ),
             Container(
@@ -58,12 +58,13 @@ class Post extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text(
-                        postData[i].postTitle,
-                        style: TextStyle(fontSize: 18.0, color: Colors.black),
-                      )),
-                  Image(image: AssetImage(postData[i].postImage)),
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      postData[i].postTitle,
+                      style: TextStyle(fontSize: 18.0, color: Colors.black),
+                    ),
+                  ),
+                  Image(image: AssetImage(postData[i].postImage))
                 ],
               ),
             ),
@@ -73,32 +74,34 @@ class Post extends StatelessWidget {
                 Row(
                   children: [
                     IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.thumb_up_alt_outlined)),
+                      onPressed: postData[i].likeOnPressed,
+                      icon: Icon(Icons.thumb_up_alt_outlined),
+                    ),
                     Text(
                       '12',
                       style: TextStyle(fontSize: 18.0),
-                    )
+                    ),
                   ],
                 ),
                 Row(
                   children: [
                     IconButton(
-                        onPressed: () {}, icon: Icon(Icons.message_outlined)),
-                    Text(
-                      '10',
-                      style: TextStyle(fontSize: 18.0),
-                    )
+                      icon: Icon(Icons.message_outlined),
+                      onPressed: postData[i].commentOnPressed,
+                    ),
+                    Text('10', style: TextStyle(fontSize: 18.0)),
                   ],
                 ),
                 Row(
                   children: [
                     IconButton(
-                        onPressed: () {}, icon: Icon(Icons.share_outlined)),
+                      icon: Icon(Icons.share_outlined),
+                      onPressed: postData[i].shareOnPressed,
+                    ),
                   ],
                 ),
               ],
-            )
+            ),
           ]
         ],
       ),

@@ -1,10 +1,11 @@
-import 'package:facebook_clone/widgets/Home/menubar.dart';
-import 'package:facebook_clone/widgets/Home/post.dart';
-import 'package:facebook_clone/widgets/Home/postbar.dart';
-import 'package:facebook_clone/widgets/Home/storybar.dart';
+
+import 'package:facebook_clone/widgets/home/menubar.dart';
+import 'package:facebook_clone/widgets/home/post.dart';
+import 'package:facebook_clone/widgets/home/postbar.dart';
+import 'package:facebook_clone/widgets/home/storybar.dart';
 import 'package:flutter/material.dart';
 class HomePage extends StatefulWidget {
-  const HomePage({ Key? key }) : super(key: key);
+  HomePage({Key? key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -14,16 +15,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsetsDirectional.only(top: 8),
+      margin: EdgeInsets.only(top: 8.0),
       child: ListView(
         children: [
           Postbar(),
-          Divider(thickness: 1,color: Colors.black12,),
+          Divider(thickness: 1, color: Colors.black12),
           Menubar(),
-           Divider(thickness: 1,color: Colors.black12,),
-           Storybar(),
-           Divider(thickness: 1,color: Colors.black12,),
-           Post(),
+          Divider(thickness: 1, color: Colors.black12),
+          Storybar(),
+          Divider(thickness: 1, color: Colors.black12),
+          Post(),
         ],
       ),
     );
